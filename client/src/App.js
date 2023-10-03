@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      Metaphor x RAG
+      Metaphor x OpenAI
       </header>
       
       <hr />
