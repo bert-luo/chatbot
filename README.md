@@ -34,11 +34,11 @@ npm run start
 
 1. Source retrieval could be improved by using OpenAI to generate a more pointed Metaphor API prompt and parameters. Currently it seems like passing in the user question as the Metaphor does not perform optimally, as it doesn't seem able to extract the key concepts behind a query (e.g. for recent news, it does not pick up the imporantace of recency)
 
-2. Data Extraction could be improved by featurizing the web documents more. Currently, only the text is extracted and batched into documents, but important information stored in the structure, URL, and title are largely lost. A solution to this I wasn't able to try would be to use a Markup-understanding LLM such as MarkupLM on huggingface. 
+2. Data Extraction could be improved by featurizing the web documents more. Currently, only the text is extracted and batched into documents, but important information stored in the structure, URL, and title are largely lost. A solution to this I wasn't able to try as to insert the raw unprocessed html into the vectorestore and use a Markup-understanding LLM such as MarkupLM on huggingface to featurize/answer questions. 
 
 3. Question answering could be improved by configuring my own answering system rather than relying on langchain's default vector database query function. This way, I could build in more complex behavior such as the ability to determine the relevance of the provided documents and accept or reject the help. Currently, it looks at the provided documents as the only source of truth. 
 
-In sum, the current app could use improvements in both document discovery as well as document featurization, but is able to perform well on general knowledge questions where there exists many text-rich websites on the subject, e.g. biographical facts.
+In sum, the current app could use improvements in both document discovery as well as document understanding, but is able to perform well on general knowledge questions where there exists many text-rich websites on the subject, e.g. biographical facts.
 
 
 
