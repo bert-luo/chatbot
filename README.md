@@ -1,6 +1,9 @@
 # Metaphor x OpenAI Chatbot
 
 ## 1. Overview 
+
+![](chatbot.png)
+
 This short project aims to be a chatbot that references and cites real evidence when answering user queries. 
 
 Upon a user query, Metaphor API is used to retrieve web pages with content most likely to be helpful in answering the user. 
@@ -16,6 +19,7 @@ Lastly, the database is queried using the initial user query and the question is
 
 ~~~
 cd ../chatbot/server
+. env/bin/activate
 pip install requirements.txt
 flask --app app run
 ~~~
