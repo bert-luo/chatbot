@@ -7,7 +7,6 @@ from langchain.embeddings import OpenAIEmbeddings
 from cassandra.cluster import Cluster
 from cassandra.auth import PlainTextAuthProvider
 
-from datasets import load_dataset
 from creds.settings import ASTRA_DB_SECURE_BUNDLE_PATH, ASTRA_DB_TOKEN_JSON_PATH, ASTRA_DB_KEYSPACE, OPENAI_API_KEY
 
 import json
