@@ -44,5 +44,5 @@ npm run start
 
 In sum, the current app could use improvements in both document discovery as well as document understanding, but is able to perform well on general knowledge questions where there exists many text-rich websites on the subject, e.g. biographical facts.
 
-
+also, I acknowledge some best practices were thrown out the window for convenience sake but hopefully overall the project captured the right spirit.
 
