@@ -10,8 +10,31 @@ Next, the web page contents are processed, embedded using OpenAI, and finally st
 Lastly, the database is queried using the initial user query and the question is answered using OpenAI's LLM
 
 ## 2. Instructions
+1. Clone this repository
+2. Change OpenAI key in server/creds/settings.py
+3. Run Server
+'''
+cd ../chatbot/server
+pip install requirements.txt
+flask --app app run
+'''
+4. Run Client (in a separate terminal)
+'''
+cd ../chatbot/client
+npm i
+npm run start
+'''
+5. Visit localhost:3000
 
 ## 3. Closing Remarks
+
+1. Source retrieval could be improved by using OpenAI to generate a more pointed Metaphor API prompt and parameters. Currently it seems like passing in the user question as the Metaphor does not perform optimally, as it doesn't seem able to extract the key concepts behind a query (e.g. for recent news, it does not pick up the imporantace of recency)
+
+2. Data Extraction could be improved by featurizing the web documents more. Currently, only the text is extracted and batched into documents, but important information stored in the structure, URL, and title are largely lost. A solution to this I wasn't able to try would be to use a Markup-understanding LLM such as MarkupLM on huggingface. 
+
+3. Question answering could be improved by configuring my own answering system rather than relying on langchain's default vector database query function. This way, I could build in more complex behavior such as the ability to determine the relevance of the provided documents and accept or reject the help. Currently, it looks at the provided documents as the only source of truth. 
+
+In sum, the current app could use improvements in both document discovery as well as document featurization, but is able to perform well on general knowledge questions where there exists many text-rich websites on the subject, e.g. biographical facts.
 
 
 
