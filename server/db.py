@@ -1,16 +1,12 @@
-# Vector support using Langchain, Apache Cassandra (Astra DB is built using
-# Cassandra), and OpenAI (to generate embeddings)
 from langchain.vectorstores.cassandra import Cassandra
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.embeddings import OpenAIEmbeddings
 
-# These are used to authenticate with Astra DB
 from cassandra.cluster import Cluster
 from cassandra.auth import PlainTextAuthProvider
 
-# Support for dataset retrieval with Hugging Face
 from datasets import load_dataset
 from creds.settings import ASTRA_DB_SECURE_BUNDLE_PATH, ASTRA_DB_TOKEN_JSON_PATH, ASTRA_DB_KEYSPACE, OPENAI_API_KEY
 
