@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Inter";
+  font-weight: normal;
+  src: local("Inter"),
+   url(./font/Inter/static/Inter-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: bold;
+  src: local("Inter"),
+   url(./font/Inter/static/Inter-SemiBold.ttf) format("truetype");
+}
+
+
+.App {
+  background-color: #282c34;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Inter";
+}
+
+
+
+.App-header {
+  padding-top: 10vh;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-weight: bold;
+}
+
+.App-title {
+  font-size: calc(10px + 2vmin);
+  
+}
+
+.App-description {
+  font-size: calc(5px+2vmin);
+  color: white;
+  padding-bottom: 20px;
+}
+
+hr {
+  color: white;
+  width: calc(40vmin);;
+}
+
+
+.form-section {
+  margin: 30px 0;
+  align-items: center;
+  transform: translate(50%, 0%);
+  width: 50%;
+  padding-bottom: 30px
+}
+
+textarea,
+button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Inter';
+}
+
+.form-control {
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #343536;
+  color: #DADADB;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-left: 2px solid #CA228C;
+  border-top: 2px solid #CA228C;
+  border-bottom: 2px solid #CA228C;
+  border-right: 2px solid #CA228C;
+}
+
+.submit-button {
+  background: #000000;
+  color: #DADADB;
+  padding: 20px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+  border-left: 2px solid #CA228C;
+  border-top: 2px solid #CA228C;
+  border-bottom: 2px solid #CA228C;
+  border-right: 2px solid #CA228C;
+  
+}
+
+.response-section {
+  align-items: center;
+  width: 50%;
+  transform: translate(50%, 0%);
+
+}
+.loading, .answer {
+  color: #DADADB;
+  padding-bottom: 30px;
+}
