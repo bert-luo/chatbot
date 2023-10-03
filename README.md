@@ -7,23 +7,27 @@ Upon a user query, Metaphor API is used to retrieve web pages with content most 
 
 Next, the web page contents are processed, embedded using OpenAI, and finally stored in a vector database (cassandra/astra db). 
 
-Lastly, the database is queried using the initial user query and the question is answered using OpenAI's LLM
+Lastly, the database is queried using the initial user query and the question is answered using OpenAI's LLM. Both the answer as well as the sources used are displayed in the UI.
 
 ## 2. Instructions
 1. Clone this repository
-2. Change OpenAI key in server/creds/settings.py
+2. Change OpenAI key in server/creds/settings.py (sorry for the trouble)
 3. Run Server
-'''
+
+~~~
 cd ../chatbot/server
 pip install requirements.txt
 flask --app app run
-'''
+~~~
+
 4. Run Client (in a separate terminal)
-'''
+
+~~~
 cd ../chatbot/client
 npm i
 npm run start
-'''
+~~~
+
 5. Visit localhost:3000
 
 ## 3. Closing Remarks
