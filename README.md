@@ -36,11 +36,9 @@ npm run start
 
 ## 3. Closing Remarks
 
-1. Source retrieval could be improved via prompt chaining to generate a more pointed Metaphor API prompt and parameters. Even with autoprompt, it seems sometimes Metaphor isn't able to recognize the complexity behind more complex questions that are passed in e.g. How many points did Jeremy Lin score the first night of Linsanity? In this example, it not only needs to recognize key entities 'Jeremy Lin' and 'Linsanity', but also must recognize the importance of query parameters 'first night' and 'points'. An article detailing a thorough recounting of Linsanity or a press release of the specific game would've been the most useful documents, but our results are all too generic. 
+1. Data extraction could be improved by featurizing the web documents more. Currently, only the text is extracted and batched into documents, but important information stored in the structure, URL, and title are largely lost. A solution to this I wasn't able to try as to insert the raw unprocessed html into the vectorestore and use a Markup-understanding LLM such as MarkupLM on huggingface to answer questions. 
 
-2. Data extraction could be improved by featurizing the web documents more. Currently, only the text is extracted and batched into documents, but important information stored in the structure, URL, and title are largely lost. A solution to this I wasn't able to try as to insert the raw unprocessed html into the vectorestore and use a Markup-understanding LLM such as MarkupLM on huggingface to answer questions. 
-
-3. Features I would build next would be 
+2. Features I would build next would be 
     - Chat History: instead of just independent Q&A, include previous conversation and retrieved documents as context for future responses
     - Autonomous Retrieval: currently, the bot follows a fixed workflow of retrieval and response. Ideally, we would want it to somehow know when call Metaphor API for more documents. A simple but faulty solution would be to implement a threshold for the highest similarity score of a document found in the vectorstore.
 
