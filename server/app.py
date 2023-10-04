@@ -45,7 +45,7 @@ def fetch_documents(query, num_docs=10):
     """
     fetch_query = QUERY_INTRO + query
     search_response = metaphor.search(
-        fetch_query, num_results=num_docs, use_autoprompt=False
+        fetch_query, num_results=num_docs, use_autoprompt=True
     )
     contents_result = search_response.get_contents()
 
